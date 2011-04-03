@@ -25,6 +25,18 @@ class SqliteTests(unittest.TestCase):
         assert parts == listform
         assert sqlstring == stringform
 
+    def test_selectmultiplecolumns(self):
+        dbobj = self.db.select('name', 'org')
+
+        parts = copy(dbobj._parts)
+        sqlstring = dbobj.sql()
+
+        listform = [("SELECT", "name", "org")]
+        stringform = "SELECT name, org"
+
+        assert parts == listform
+        assert sqlstring == stringform
+
     def test_from(self):
         dbobj = self.db.from_('mytable')
         parts = copy(dbobj._parts)
