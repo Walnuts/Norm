@@ -1,6 +1,6 @@
 # NORM
 
-NORM (_N_ot an _O_bject-_Relational_ _M_apper) is a SQL abstraction
+NORM ( _N_ot an _O_bject-_Relational_ _M_apper ) is a SQL abstraction
 library that sits somewhere between raw queries and full on ORMs in
 terms of features.
 
